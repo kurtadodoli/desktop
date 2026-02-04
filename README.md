@@ -89,4 +89,4 @@ Update the hero section text and navigation items in their respective component 
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+
