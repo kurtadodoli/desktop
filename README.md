@@ -85,7 +85,6 @@ Update the hero section text and navigation items in their respective component 
 - **React** - UI library
 - **Vite** - Build tool and development server
 
-- **Google Fonts** - Inter font family
 
 
 
