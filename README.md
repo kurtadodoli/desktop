@@ -83,7 +83,7 @@ Update the hero section text and navigation items in their respective component 
 ## Technologies Used
 
 - **React** - UI library
-- **Vite** - Build tool and development server
+
 
 
 
