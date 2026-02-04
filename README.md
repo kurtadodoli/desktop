@@ -87,6 +87,6 @@ Update the hero section text and navigation items in their respective component 
 - **CSS3** - Styling with modern features like backdrop-filter
 - **Google Fonts** - Inter font family
 
-## License
+
 
 
