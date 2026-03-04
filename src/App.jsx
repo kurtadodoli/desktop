@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Links from './components/Links'
 import Work from './components/Work'
+import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       {currentPage === 'about' && <About onBack={() => setCurrentPage('home')} />}
       {currentPage === 'links' && <Links onBack={() => setCurrentPage('home')} />}
       {currentPage === 'work' && <Work onBack={() => setCurrentPage('home')} />}
+      {currentPage === 'faq' && <FAQ onBack={() => setCurrentPage('home')} />}
       {currentPage === 'contact' && <Contact onBack={() => setCurrentPage('home')} />}
     </div>
   )

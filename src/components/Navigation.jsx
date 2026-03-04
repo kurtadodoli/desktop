@@ -35,11 +35,7 @@ function Navigation({ onNavigate }) {
         <button
           key={item.id}
           className="nav-item"
-          onClick={() => {
-            if (item.id !== 'faq') {
-              onNavigate(item.id)
-            }
-          }}
+          onClick={() => onNavigate(item.id)}
         >
           <div className="nav-icon">
             {renderIcon(item)}
