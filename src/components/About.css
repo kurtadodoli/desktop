@@ -6,42 +6,193 @@
 
 .about-card {
   background: white;
-  border-radius: 20px;
+  border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  padding: 40px 30px;
+  padding: 40px 35px;
   animation: slideIn 0.5s ease-out;
 }
 
 .back-btn {
   background: none;
-  border: none;
-  color: #333;
-  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  font-size: 13px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   transition: all 0.3s ease;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
 }
 
 .back-btn:hover {
   color: #e74c3c;
+  border-color: #e74c3c;
+  background: #fef2f2;
 }
 
-.page-title {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 25px;
-  font-weight: 300;
+/* About Hero / Profile */
+.about-hero {
+  text-align: center;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.about-content {
+.about-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #444 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.about-avatar span {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.about-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.about-role {
+  font-size: 14px;
+  color: #888;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Sections */
+.about-section {
+  margin-bottom: 30px;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-dot {
+  width: 8px;
+  height: 8px;
+  background: #e74c3c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.about-text {
   color: #555;
   line-height: 1.8;
   font-size: 15px;
+  margin-bottom: 12px;
 }
 
-.about-content p {
-  margin-bottom: 15px;
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.3s ease;
+  animation: fadeUp 0.5s ease-out both;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #ddd;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-item {
+  animation: fadeUp 0.5s ease-out both;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.skill-percent {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+}
+
+.skill-bar {
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a1a1a, #555);
+  border-radius: 10px;
+  transition: width 1s ease-out;
+  animation: skillGrow 1.2s ease-out both;
 }
 
 @keyframes slideIn {
@@ -52,5 +203,29 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skillGrow {
+  from { width: 0 !important; }
+}
+
+@media (max-width: 500px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-card {
+    padding: 30px 20px;
   }
 }
